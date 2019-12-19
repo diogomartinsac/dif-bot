@@ -1,0 +1,8 @@
+prefix=/home/diogo/wheeled_robot_ws/install
+
+Name: wheeled-robot-description
+Description: Description of wheeled-robot-description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/diogo/wheeled_robot_ws/install/lib 
+Requires: 

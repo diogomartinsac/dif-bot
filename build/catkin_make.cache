@@ -1,0 +1,2 @@
+wheeled-robot-description
+-DCATKIN_DEVEL_PREFIX=/home/diogo/wheeled_robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/diogo/wheeled_robot_ws/install -G Unix Makefiles
