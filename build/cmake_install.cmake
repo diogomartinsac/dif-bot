@@ -131,6 +131,10 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/diogo/wheeled_robot_ws/build/gtest/cmake_install.cmake")
+  include("/home/diogo/wheeled_robot_ws/build/fiducials/cmake_install.cmake")
+  include("/home/diogo/wheeled_robot_ws/build/fiducial_msgs/cmake_install.cmake")
+  include("/home/diogo/wheeled_robot_ws/build/aruco_detect/cmake_install.cmake")
+  include("/home/diogo/wheeled_robot_ws/build/fiducial_slam/cmake_install.cmake")
   include("/home/diogo/wheeled_robot_ws/build/wheeled-robot-description/cmake_install.cmake")
 
 endif()
