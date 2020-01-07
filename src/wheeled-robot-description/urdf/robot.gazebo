@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <robot name="wheeled-robot" xmlns:xacro="https://www.ros.org/wiki/xacro" >
 
+<!-- Colors  -->
   <gazebo reference="link_chassis">
     <material>Gazebo/Orange</material>
   </gazebo>
@@ -13,6 +14,7 @@
     <material>Gazebo/Blue</material>
   </gazebo>
 
+<!-- Camera Plugin -->
   <gazebo reference="camera">
   <material>Gazebo/Blue</material>
   <sensor type="camera" name="camera1">
@@ -29,7 +31,6 @@
         <far>300</far>
       </clip>
     </camera>
-    
     <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>0.0</updateRate>
@@ -45,9 +46,10 @@
       <distortionT2>0.0</distortionT2>
     </plugin>
   </sensor>
- </gazebo>
+  </gazebo>
 
-    <gazebo>
+<!-- Differential Plugin -->
+  <gazebo>
     <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
       <alwaysOn>true</alwaysOn>
       <updateRate>20</updateRate>
@@ -62,7 +64,8 @@
       <robotBaseFrame>link_chassis</robotBaseFrame>
     </plugin>
   </gazebo>
-
+  
+<!-- Laser Sensor -->
   <gazebo reference="sensor_laser">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
@@ -95,4 +98,5 @@
       </plugin>
     </sensor>
   </gazebo>
-  </robot
+
+</robot>
